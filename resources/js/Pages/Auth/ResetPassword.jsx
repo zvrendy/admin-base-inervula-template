@@ -60,7 +60,10 @@ export default function ResetPassword({ token, email }) {
                 </div>
 
                 <div className="mt-4">
-                    <InputLabel htmlFor="password_confirmation" value="Confirm Password" />
+                    <InputLabel
+                        htmlFor="password_confirmation"
+                        value="Confirm Password"
+                    />
 
                     <TextInput
                         type="password"
@@ -69,10 +72,15 @@ export default function ResetPassword({ token, email }) {
                         value={data.password_confirmation}
                         className="mt-1 block w-full"
                         autoComplete="new-password"
-                        onChange={(e) => setData('password_confirmation', e.target.value)}
+                        onChange={(e) =>
+                            setData('password_confirmation', e.target.value)
+                        }
                     />
 
-                    <InputError message={errors.password_confirmation} className="mt-2" />
+                    <InputError
+                        message={errors.password_confirmation}
+                        className="mt-2"
+                    />
                 </div>
 
                 <div className="mt-4 flex items-center justify-end">
